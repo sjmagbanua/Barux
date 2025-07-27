@@ -1,2 +1,2 @@
-export 'onboardingScreenBody.dart';
+export 'onboardingScreenButton.dart';
 export 'onboardingScreenPage.dart';

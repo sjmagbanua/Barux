@@ -24,9 +24,9 @@ class Onboardingscreenpage extends StatelessWidget {
                   fit: BoxFit.cover,
                 ),
               ),
-              child: Column(
-                children: [],
-              ),
+              // child: Column(
+              //   children: [Text('data')],
+              // ),
             ),
           ),
           Padding(
@@ -42,7 +42,10 @@ class Onboardingscreenpage extends StatelessWidget {
               ),
             ),
           ),
-          Onboardingscreenbody(),
+          Padding(
+            padding: const EdgeInsets.only(top: 100),
+            child: Onboardingscreenbutton(),
+          ),
         ],
       ),
     );

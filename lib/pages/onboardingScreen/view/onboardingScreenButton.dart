@@ -2,8 +2,8 @@ import 'package:barux/pages/signup/view/view.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-class Onboardingscreenbody extends StatelessWidget {
-  const Onboardingscreenbody({super.key});
+class Onboardingscreenbutton extends StatelessWidget {
+  const Onboardingscreenbutton({super.key});
 
   @override
   Widget build(BuildContext context) {
