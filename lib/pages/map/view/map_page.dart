@@ -1,3 +1,4 @@
+import 'package:barux/pages/map/map.dart';
 import 'package:flutter/material.dart';
 
 class MapPage extends StatelessWidget {
@@ -5,6 +6,8 @@ class MapPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return const Scaffold(
+      body: MapGoogle(),
+    );
   }
 }

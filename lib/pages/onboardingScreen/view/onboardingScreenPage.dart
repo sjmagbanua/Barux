@@ -11,37 +11,37 @@ class Onboardingscreenpage extends StatelessWidget {
     return Scaffold(
       body: Stack(
         children: [
-          // Opacity(
-          //   opacity: 0.5,
-          //   child: Container(
-          //     height: double.infinity,
-          //     width: double.infinity,
-          //     decoration: BoxDecoration(
-          //       image: DecorationImage(
-          //         image: AssetImage(
-          //           Assets.barberSpray,
-          //         ),
-          //         fit: BoxFit.cover,
-          //       ),
-          //     ),
-          //     child: Column(
-          //       children: [],
-          //     ),
-          //   ),
-          // ),
-          // Padding(
-          //   padding: const EdgeInsets.symmetric(horizontal: 32),
-          //   child: Align(
-          //     alignment: Alignment.topLeft,
-          //     child: Text(
-          //       'Locate the barber near you.',
-          //       style: TextStyle(
-          //         color: Color(0xFF171717),
-          //         fontSize: 32,
-          //       ),
-          //     ),
-          //   ),
-          // ),
+          Opacity(
+            opacity: 0.5,
+            child: Container(
+              height: double.infinity,
+              width: double.infinity,
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage(
+                    Assets.barberSpray,
+                  ),
+                  fit: BoxFit.cover,
+                ),
+              ),
+              child: Column(
+                children: [],
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 32),
+            child: Align(
+              alignment: Alignment.topLeft,
+              child: Text(
+                'Locate the barber near you.',
+                style: TextStyle(
+                  color: Color(0xFF171717),
+                  fontSize: 32,
+                ),
+              ),
+            ),
+          ),
           Onboardingscreenbody(),
         ],
       ),
