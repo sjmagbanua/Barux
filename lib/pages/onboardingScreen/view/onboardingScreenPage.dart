@@ -12,7 +12,7 @@ class Onboardingscreenpage extends StatelessWidget {
       body: Stack(
         children: [
           Opacity(
-            opacity: 0.5,
+            opacity: 0.4,
             child: Container(
               height: double.infinity,
               width: double.infinity,
@@ -43,8 +43,13 @@ class Onboardingscreenpage extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(top: 100),
-            child: Onboardingscreenbutton(),
+            padding: const EdgeInsets.symmetric(horizontal: 48),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                Onboardingscreenbutton(),
+              ],
+            ),
           ),
         ],
       ),
