@@ -33,14 +33,22 @@ class MyApp extends StatelessWidget {
           ),
         ),
         inputDecorationTheme: InputDecorationTheme(
-          focusedBorder: OutlineInputBorder(
-              borderSide: BorderSide.none,
-              borderRadius: BorderRadius.circular(106)),
-          border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(106),
-            borderSide: BorderSide.none,
+          enabledBorder: UnderlineInputBorder(
+            borderSide: BorderSide(
+              width: 2,
+              color: Colors.grey,
+            ),
           ),
-          filled: true,
+          focusedBorder: UnderlineInputBorder(
+            borderSide: BorderSide(
+              width: 2,
+              color: Colors.grey,
+            ),
+          ),
+          border: OutlineInputBorder(
+              // borderRadius: BorderRadius.circular(106),
+              ),
+          // filled: true,
           contentPadding: EdgeInsets.symmetric(
             vertical: 23,
           ),

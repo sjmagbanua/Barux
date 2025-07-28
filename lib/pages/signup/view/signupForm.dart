@@ -8,10 +8,13 @@ class Signupform extends StatelessWidget {
     return Column(
       children: [
         TextFormField(
-          textAlign: TextAlign.center,
+          textAlign: TextAlign.left,
           decoration: InputDecoration(
             fillColor: Colors.red,
-            hintText: 'Name',
+            hintText: 'Full Name',
+            prefixIcon: Icon(
+              Icons.account_circle_outlined,
+            ),
           ),
         ),
         Padding(
@@ -19,18 +22,30 @@ class Signupform extends StatelessWidget {
             vertical: 16,
           ),
           child: TextFormField(
-            textAlign: TextAlign.center,
+            textAlign: TextAlign.left,
             decoration: InputDecoration(
               fillColor: Colors.red,
-              hintText: 'Email',
+              hintText: 'Phone or Email',
+              prefixIcon: Icon(
+                Icons.email_outlined,
+              ),
             ),
           ),
         ),
         TextFormField(
-          textAlign: TextAlign.center,
+          textAlign: TextAlign.left,
           decoration: InputDecoration(
             fillColor: Colors.red,
             hintText: 'Password',
+            prefixIcon: Icon(
+              Icons.lock_outline,
+            ),
+            suffixIcon: IconButton(
+              icon: Icon(
+                Icons.remove_red_eye,
+              ),
+              onPressed: () {},
+            ),
           ),
         ),
         Padding(
@@ -38,10 +53,19 @@ class Signupform extends StatelessWidget {
             vertical: 16,
           ),
           child: TextFormField(
-            textAlign: TextAlign.center,
+            textAlign: TextAlign.left,
             decoration: InputDecoration(
               fillColor: Colors.red,
               hintText: 'Confirm Password',
+              prefixIcon: Icon(
+                Icons.lock_outline,
+              ),
+              suffixIcon: IconButton(
+                icon: Icon(
+                  Icons.remove_red_eye,
+                ),
+                onPressed: () {},
+              ),
             ),
           ),
         ),

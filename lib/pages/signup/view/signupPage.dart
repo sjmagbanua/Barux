@@ -11,7 +11,10 @@ class SignupPage extends StatelessWidget {
       body: Column(
         children: [
           Signupappbar(),
-          Signupform(),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 48),
+            child: Signupform(),
+          ),
         ],
       ),
     );
