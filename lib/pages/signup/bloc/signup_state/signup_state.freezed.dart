@@ -20,6 +20,8 @@ mixin _$SingupState {
   TextFieldInput get emailValue => throw _privateConstructorUsedError;
   TextFieldInput get passwordValue => throw _privateConstructorUsedError;
   TextFieldInput get confirmPasswordValue => throw _privateConstructorUsedError;
+  bool get toggle => throw _privateConstructorUsedError;
+  bool get confirmPassToggle => throw _privateConstructorUsedError;
 
   /// Create a copy of SingupState
   /// with the given fields replaced by the non-null parameter values.
@@ -38,7 +40,9 @@ abstract class $SingupStateCopyWith<$Res> {
       {TextFieldInput fullNameValue,
       TextFieldInput emailValue,
       TextFieldInput passwordValue,
-      TextFieldInput confirmPasswordValue});
+      TextFieldInput confirmPasswordValue,
+      bool toggle,
+      bool confirmPassToggle});
 
   $TextFieldInputCopyWith<$Res> get fullNameValue;
   $TextFieldInputCopyWith<$Res> get emailValue;
@@ -65,6 +69,8 @@ class _$SingupStateCopyWithImpl<$Res, $Val extends SingupState>
     Object? emailValue = null,
     Object? passwordValue = null,
     Object? confirmPasswordValue = null,
+    Object? toggle = null,
+    Object? confirmPassToggle = null,
   }) {
     return _then(_value.copyWith(
       fullNameValue: null == fullNameValue
@@ -83,6 +89,14 @@ class _$SingupStateCopyWithImpl<$Res, $Val extends SingupState>
           ? _value.confirmPasswordValue
           : confirmPasswordValue // ignore: cast_nullable_to_non_nullable
               as TextFieldInput,
+      toggle: null == toggle
+          ? _value.toggle
+          : toggle // ignore: cast_nullable_to_non_nullable
+              as bool,
+      confirmPassToggle: null == confirmPassToggle
+          ? _value.confirmPassToggle
+          : confirmPassToggle // ignore: cast_nullable_to_non_nullable
+              as bool,
     ) as $Val);
   }
 
@@ -139,7 +153,9 @@ abstract class _$$SingupStateImplCopyWith<$Res>
       {TextFieldInput fullNameValue,
       TextFieldInput emailValue,
       TextFieldInput passwordValue,
-      TextFieldInput confirmPasswordValue});
+      TextFieldInput confirmPasswordValue,
+      bool toggle,
+      bool confirmPassToggle});
 
   @override
   $TextFieldInputCopyWith<$Res> get fullNameValue;
@@ -168,6 +184,8 @@ class __$$SingupStateImplCopyWithImpl<$Res>
     Object? emailValue = null,
     Object? passwordValue = null,
     Object? confirmPasswordValue = null,
+    Object? toggle = null,
+    Object? confirmPassToggle = null,
   }) {
     return _then(_$SingupStateImpl(
       fullNameValue: null == fullNameValue
@@ -186,6 +204,14 @@ class __$$SingupStateImplCopyWithImpl<$Res>
           ? _value.confirmPasswordValue
           : confirmPasswordValue // ignore: cast_nullable_to_non_nullable
               as TextFieldInput,
+      toggle: null == toggle
+          ? _value.toggle
+          : toggle // ignore: cast_nullable_to_non_nullable
+              as bool,
+      confirmPassToggle: null == confirmPassToggle
+          ? _value.confirmPassToggle
+          : confirmPassToggle // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
@@ -198,7 +224,9 @@ class _$SingupStateImpl implements _SingupState {
       this.emailValue = const TextFieldInput(errorType: ErrorType.empty),
       this.passwordValue = const TextFieldInput(errorType: ErrorType.empty),
       this.confirmPasswordValue =
-          const TextFieldInput(errorType: ErrorType.empty)});
+          const TextFieldInput(errorType: ErrorType.empty),
+      this.toggle = false,
+      this.confirmPassToggle = false});
 
   @override
   @JsonKey()
@@ -212,10 +240,16 @@ class _$SingupStateImpl implements _SingupState {
   @override
   @JsonKey()
   final TextFieldInput confirmPasswordValue;
+  @override
+  @JsonKey()
+  final bool toggle;
+  @override
+  @JsonKey()
+  final bool confirmPassToggle;
 
   @override
   String toString() {
-    return 'SingupState(fullNameValue: $fullNameValue, emailValue: $emailValue, passwordValue: $passwordValue, confirmPasswordValue: $confirmPasswordValue)';
+    return 'SingupState(fullNameValue: $fullNameValue, emailValue: $emailValue, passwordValue: $passwordValue, confirmPasswordValue: $confirmPasswordValue, toggle: $toggle, confirmPassToggle: $confirmPassToggle)';
   }
 
   @override
@@ -230,12 +264,15 @@ class _$SingupStateImpl implements _SingupState {
             (identical(other.passwordValue, passwordValue) ||
                 other.passwordValue == passwordValue) &&
             (identical(other.confirmPasswordValue, confirmPasswordValue) ||
-                other.confirmPasswordValue == confirmPasswordValue));
+                other.confirmPasswordValue == confirmPasswordValue) &&
+            (identical(other.toggle, toggle) || other.toggle == toggle) &&
+            (identical(other.confirmPassToggle, confirmPassToggle) ||
+                other.confirmPassToggle == confirmPassToggle));
   }
 
   @override
   int get hashCode => Object.hash(runtimeType, fullNameValue, emailValue,
-      passwordValue, confirmPasswordValue);
+      passwordValue, confirmPasswordValue, toggle, confirmPassToggle);
 
   /// Create a copy of SingupState
   /// with the given fields replaced by the non-null parameter values.
@@ -251,7 +288,9 @@ abstract class _SingupState implements SingupState {
       {final TextFieldInput fullNameValue,
       final TextFieldInput emailValue,
       final TextFieldInput passwordValue,
-      final TextFieldInput confirmPasswordValue}) = _$SingupStateImpl;
+      final TextFieldInput confirmPasswordValue,
+      final bool toggle,
+      final bool confirmPassToggle}) = _$SingupStateImpl;
 
   @override
   TextFieldInput get fullNameValue;
@@ -261,6 +300,10 @@ abstract class _SingupState implements SingupState {
   TextFieldInput get passwordValue;
   @override
   TextFieldInput get confirmPasswordValue;
+  @override
+  bool get toggle;
+  @override
+  bool get confirmPassToggle;
 
   /// Create a copy of SingupState
   /// with the given fields replaced by the non-null parameter values.

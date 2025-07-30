@@ -22,5 +22,7 @@ class SingupState with _$SingupState {
       errorType: ErrorType.empty,
     ))
     TextFieldInput confirmPasswordValue,
+    @Default(false) bool toggle,
+    @Default(false) bool confirmPassToggle,
   }) = _SingupState;
 }
