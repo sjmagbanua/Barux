@@ -11,6 +11,8 @@ class SignupBloc extends Bloc<SignupEvent, SingupState> {
     on<EmailChanged>(_emailChanged);
     on<PasswordChanged>(_passwordChanged);
     on<ConfirmPasswordChanged>(_confirmPasswordChanged);
+    on<PasswordToggle>(_passwordToggle);
+    on<ConfirmPasswordToggle>(_confirmPassToggle);
   }
 
   void _emailChanged(EmailChanged event, Emitter<SingupState> emit) {
@@ -70,7 +72,6 @@ class SignupBloc extends Bloc<SignupEvent, SingupState> {
       ConfirmPasswordChanged event, Emitter<SingupState> emit) {
     var confirmPassword = event.value;
     var errorType = ErrorType.empty;
-    print('here $confirmPassword');
     if (confirmPassword.isEmpty) {
       errorType = ErrorType.empty;
     } else {
@@ -81,6 +82,21 @@ class SignupBloc extends Bloc<SignupEvent, SingupState> {
         value: confirmPassword,
         errorType: errorType,
       ),
+    );
+  }
+
+  void _passwordToggle(PasswordToggle event, Emitter<SingupState> emit) {
+    var toggle = state.toggle;
+    emit(
+      state.copyWith(toggle: !toggle),
+    );
+  }
+
+  void _confirmPassToggle(
+      ConfirmPasswordToggle event, Emitter<SingupState> emit) {
+    var confirmPassToggle = state.confirmPassToggle;
+    emit(
+      state.copyWith(confirmPassToggle: !confirmPassToggle),
     );
   }
 }
