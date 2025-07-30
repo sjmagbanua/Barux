@@ -38,6 +38,7 @@ dependencies:
   drift: ^2.5.0
   freezed: ^2.3.2
   build_runner: ^2.0.0
+  bloc: ^9.0.0
   
 dev_dependencies:
   flutter_test:

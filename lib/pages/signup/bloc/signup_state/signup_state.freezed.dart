@@ -16,7 +16,10 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$SingupState {
-  TextFieldInput get value => throw _privateConstructorUsedError;
+  TextFieldInput get fullNameValue => throw _privateConstructorUsedError;
+  TextFieldInput get emailValue => throw _privateConstructorUsedError;
+  TextFieldInput get passwordValue => throw _privateConstructorUsedError;
+  TextFieldInput get confirmPasswordValue => throw _privateConstructorUsedError;
 
   /// Create a copy of SingupState
   /// with the given fields replaced by the non-null parameter values.
@@ -31,9 +34,16 @@ abstract class $SingupStateCopyWith<$Res> {
           SingupState value, $Res Function(SingupState) then) =
       _$SingupStateCopyWithImpl<$Res, SingupState>;
   @useResult
-  $Res call({TextFieldInput value});
+  $Res call(
+      {TextFieldInput fullNameValue,
+      TextFieldInput emailValue,
+      TextFieldInput passwordValue,
+      TextFieldInput confirmPasswordValue});
 
-  $TextFieldInputCopyWith<$Res> get value;
+  $TextFieldInputCopyWith<$Res> get fullNameValue;
+  $TextFieldInputCopyWith<$Res> get emailValue;
+  $TextFieldInputCopyWith<$Res> get passwordValue;
+  $TextFieldInputCopyWith<$Res> get confirmPasswordValue;
 }
 
 /// @nodoc
@@ -51,12 +61,27 @@ class _$SingupStateCopyWithImpl<$Res, $Val extends SingupState>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? value = null,
+    Object? fullNameValue = null,
+    Object? emailValue = null,
+    Object? passwordValue = null,
+    Object? confirmPasswordValue = null,
   }) {
     return _then(_value.copyWith(
-      value: null == value
-          ? _value.value
-          : value // ignore: cast_nullable_to_non_nullable
+      fullNameValue: null == fullNameValue
+          ? _value.fullNameValue
+          : fullNameValue // ignore: cast_nullable_to_non_nullable
+              as TextFieldInput,
+      emailValue: null == emailValue
+          ? _value.emailValue
+          : emailValue // ignore: cast_nullable_to_non_nullable
+              as TextFieldInput,
+      passwordValue: null == passwordValue
+          ? _value.passwordValue
+          : passwordValue // ignore: cast_nullable_to_non_nullable
+              as TextFieldInput,
+      confirmPasswordValue: null == confirmPasswordValue
+          ? _value.confirmPasswordValue
+          : confirmPasswordValue // ignore: cast_nullable_to_non_nullable
               as TextFieldInput,
     ) as $Val);
   }
@@ -65,9 +90,39 @@ class _$SingupStateCopyWithImpl<$Res, $Val extends SingupState>
   /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
-  $TextFieldInputCopyWith<$Res> get value {
-    return $TextFieldInputCopyWith<$Res>(_value.value, (value) {
-      return _then(_value.copyWith(value: value) as $Val);
+  $TextFieldInputCopyWith<$Res> get fullNameValue {
+    return $TextFieldInputCopyWith<$Res>(_value.fullNameValue, (value) {
+      return _then(_value.copyWith(fullNameValue: value) as $Val);
+    });
+  }
+
+  /// Create a copy of SingupState
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $TextFieldInputCopyWith<$Res> get emailValue {
+    return $TextFieldInputCopyWith<$Res>(_value.emailValue, (value) {
+      return _then(_value.copyWith(emailValue: value) as $Val);
+    });
+  }
+
+  /// Create a copy of SingupState
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $TextFieldInputCopyWith<$Res> get passwordValue {
+    return $TextFieldInputCopyWith<$Res>(_value.passwordValue, (value) {
+      return _then(_value.copyWith(passwordValue: value) as $Val);
+    });
+  }
+
+  /// Create a copy of SingupState
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $TextFieldInputCopyWith<$Res> get confirmPasswordValue {
+    return $TextFieldInputCopyWith<$Res>(_value.confirmPasswordValue, (value) {
+      return _then(_value.copyWith(confirmPasswordValue: value) as $Val);
     });
   }
 }
@@ -80,10 +135,20 @@ abstract class _$$SingupStateImplCopyWith<$Res>
       __$$SingupStateImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({TextFieldInput value});
+  $Res call(
+      {TextFieldInput fullNameValue,
+      TextFieldInput emailValue,
+      TextFieldInput passwordValue,
+      TextFieldInput confirmPasswordValue});
 
   @override
-  $TextFieldInputCopyWith<$Res> get value;
+  $TextFieldInputCopyWith<$Res> get fullNameValue;
+  @override
+  $TextFieldInputCopyWith<$Res> get emailValue;
+  @override
+  $TextFieldInputCopyWith<$Res> get passwordValue;
+  @override
+  $TextFieldInputCopyWith<$Res> get confirmPasswordValue;
 }
 
 /// @nodoc
@@ -99,12 +164,27 @@ class __$$SingupStateImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? value = null,
+    Object? fullNameValue = null,
+    Object? emailValue = null,
+    Object? passwordValue = null,
+    Object? confirmPasswordValue = null,
   }) {
     return _then(_$SingupStateImpl(
-      value: null == value
-          ? _value.value
-          : value // ignore: cast_nullable_to_non_nullable
+      fullNameValue: null == fullNameValue
+          ? _value.fullNameValue
+          : fullNameValue // ignore: cast_nullable_to_non_nullable
+              as TextFieldInput,
+      emailValue: null == emailValue
+          ? _value.emailValue
+          : emailValue // ignore: cast_nullable_to_non_nullable
+              as TextFieldInput,
+      passwordValue: null == passwordValue
+          ? _value.passwordValue
+          : passwordValue // ignore: cast_nullable_to_non_nullable
+              as TextFieldInput,
+      confirmPasswordValue: null == confirmPasswordValue
+          ? _value.confirmPasswordValue
+          : confirmPasswordValue // ignore: cast_nullable_to_non_nullable
               as TextFieldInput,
     ));
   }
@@ -114,15 +194,28 @@ class __$$SingupStateImplCopyWithImpl<$Res>
 
 class _$SingupStateImpl implements _SingupState {
   const _$SingupStateImpl(
-      {this.value = const TextFieldInput(errorType: ErrorType.empty)});
+      {this.fullNameValue = const TextFieldInput(errorType: ErrorType.empty),
+      this.emailValue = const TextFieldInput(errorType: ErrorType.empty),
+      this.passwordValue = const TextFieldInput(errorType: ErrorType.empty),
+      this.confirmPasswordValue =
+          const TextFieldInput(errorType: ErrorType.empty)});
 
   @override
   @JsonKey()
-  final TextFieldInput value;
+  final TextFieldInput fullNameValue;
+  @override
+  @JsonKey()
+  final TextFieldInput emailValue;
+  @override
+  @JsonKey()
+  final TextFieldInput passwordValue;
+  @override
+  @JsonKey()
+  final TextFieldInput confirmPasswordValue;
 
   @override
   String toString() {
-    return 'SingupState(value: $value)';
+    return 'SingupState(fullNameValue: $fullNameValue, emailValue: $emailValue, passwordValue: $passwordValue, confirmPasswordValue: $confirmPasswordValue)';
   }
 
   @override
@@ -130,11 +223,19 @@ class _$SingupStateImpl implements _SingupState {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$SingupStateImpl &&
-            (identical(other.value, value) || other.value == value));
+            (identical(other.fullNameValue, fullNameValue) ||
+                other.fullNameValue == fullNameValue) &&
+            (identical(other.emailValue, emailValue) ||
+                other.emailValue == emailValue) &&
+            (identical(other.passwordValue, passwordValue) ||
+                other.passwordValue == passwordValue) &&
+            (identical(other.confirmPasswordValue, confirmPasswordValue) ||
+                other.confirmPasswordValue == confirmPasswordValue));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, value);
+  int get hashCode => Object.hash(runtimeType, fullNameValue, emailValue,
+      passwordValue, confirmPasswordValue);
 
   /// Create a copy of SingupState
   /// with the given fields replaced by the non-null parameter values.
@@ -146,10 +247,20 @@ class _$SingupStateImpl implements _SingupState {
 }
 
 abstract class _SingupState implements SingupState {
-  const factory _SingupState({final TextFieldInput value}) = _$SingupStateImpl;
+  const factory _SingupState(
+      {final TextFieldInput fullNameValue,
+      final TextFieldInput emailValue,
+      final TextFieldInput passwordValue,
+      final TextFieldInput confirmPasswordValue}) = _$SingupStateImpl;
 
   @override
-  TextFieldInput get value;
+  TextFieldInput get fullNameValue;
+  @override
+  TextFieldInput get emailValue;
+  @override
+  TextFieldInput get passwordValue;
+  @override
+  TextFieldInput get confirmPasswordValue;
 
   /// Create a copy of SingupState
   /// with the given fields replaced by the non-null parameter values.

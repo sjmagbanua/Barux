@@ -9,6 +9,18 @@ class SingupState with _$SingupState {
     @Default(TextFieldInput(
       errorType: ErrorType.empty,
     ))
-    TextFieldInput value,
+    TextFieldInput fullNameValue,
+    @Default(TextFieldInput(
+      errorType: ErrorType.empty,
+    ))
+    TextFieldInput emailValue,
+    @Default(TextFieldInput(
+      errorType: ErrorType.empty,
+    ))
+    TextFieldInput passwordValue,
+    @Default(TextFieldInput(
+      errorType: ErrorType.empty,
+    ))
+    TextFieldInput confirmPasswordValue,
   }) = _SingupState;
 }
