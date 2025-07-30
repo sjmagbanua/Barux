@@ -1,8 +1,7 @@
+import 'package:barux/pages/onboardingScreen/view/onboardingScreenPage.dart';
 import 'package:barux/pages/signup/view/signupPage.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-
-import 'pages/onboardingScreen/view/view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -30,17 +29,26 @@ class MyApp extends StatelessWidget {
               65,
             ),
             elevation: 0,
+            backgroundColor: Colors.grey,
           ),
         ),
         inputDecorationTheme: InputDecorationTheme(
-          focusedBorder: OutlineInputBorder(
-              borderSide: BorderSide.none,
-              borderRadius: BorderRadius.circular(106)),
-          border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(106),
-            borderSide: BorderSide.none,
+          enabledBorder: UnderlineInputBorder(
+            borderSide: BorderSide(
+              width: 2,
+              color: Colors.grey,
+            ),
           ),
-          filled: true,
+          focusedBorder: UnderlineInputBorder(
+            borderSide: BorderSide(
+              width: 2,
+              color: Colors.grey,
+            ),
+          ),
+          border: OutlineInputBorder(
+              // borderRadius: BorderRadius.circular(106),
+              ),
+          // filled: true,
           contentPadding: EdgeInsets.symmetric(
             vertical: 23,
           ),
