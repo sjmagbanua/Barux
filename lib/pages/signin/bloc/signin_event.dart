@@ -3,8 +3,8 @@ abstract class SigninEvent {
 }
 
 class EmailChanged extends SigninEvent {
-  final String value;
-  const EmailChanged(this.value);
+  final String email;
+  const EmailChanged(this.email);
 }
 
 class PasswordChanged extends SigninEvent {
