@@ -1,3 +1,4 @@
+import 'package:barux/pages/signin/view/signin_page.dart';
 import 'package:barux/pages/signup/view/view.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -10,7 +11,9 @@ class Onboardingscreenbutton extends StatelessWidget {
     return Column(
       children: [
         ElevatedButton(
-          onPressed: () {},
+          onPressed: () {
+            context.push(SigninPage.route);
+          },
           child: Text(
             'Login',
           ),
