@@ -1,4 +1,5 @@
 import 'package:barux/pages/signin/signin.dart';
+import 'package:barux/pages/signin/view/signin_appbar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -16,6 +17,9 @@ class SigninPage extends StatelessWidget {
       child: const Scaffold(
         body: CustomScrollView(
           slivers: [
+            SliverToBoxAdapter(
+              child: SigninAppbar(),
+            ),
             SliverToBoxAdapter(
               child: Padding(
                 padding: EdgeInsets.symmetric(
