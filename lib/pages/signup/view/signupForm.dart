@@ -1,7 +1,9 @@
 import 'package:barux/models/models.dart';
+import 'package:barux/pages/signin/view/signin_page.dart';
 import 'package:barux/pages/signup/bloc/bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
 
 class Signupform extends StatelessWidget {
   const Signupform({super.key});
@@ -113,7 +115,7 @@ class Signupform extends StatelessWidget {
                 Text('Dont have account?'),
                 TextButton(
                   onPressed: () {
-                    // context.push(Onboardingscreenpage.route);
+                    context.push(SigninPage.route);
                   },
                   child: Text('Sign in'),
                 )
