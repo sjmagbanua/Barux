@@ -1,3 +1,4 @@
+import 'package:barux/constant/assets.dart';
 import 'package:flutter/material.dart';
 
 class BarberCard extends StatelessWidget {
@@ -29,7 +30,11 @@ class BarberCard extends StatelessWidget {
               // Barber Profile Image
               CircleAvatar(
                 radius: 40,
-                // backgroundImage: NetworkImage(imageUrl),
+                child: ClipOval(
+                  child: Image.asset(
+                    Assets.neo,
+                  ),
+                ),
               ),
               SizedBox(width: 16),
               // Barber Details
