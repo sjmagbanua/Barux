@@ -6,6 +6,7 @@ class HomeFooter extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BottomNavigationBar(
+      type: BottomNavigationBarType.fixed,
       items: [
         BottomNavigationBarItem(
           icon: Icon(
@@ -19,21 +20,21 @@ class HomeFooter extends StatelessWidget {
             Icons.local_activity,
             color: Colors.grey,
           ),
-          label: 'home',
+          label: 'local',
         ),
         BottomNavigationBarItem(
           icon: Icon(
             Icons.message,
             color: Colors.grey,
           ),
-          label: 'home',
+          label: 'message',
         ),
         BottomNavigationBarItem(
           icon: Icon(
             Icons.account_circle,
             color: Colors.grey,
           ),
-          label: 'home',
+          label: 'account',
         ),
       ],
     );
