@@ -1,3 +1,4 @@
+import 'package:barux/constant/assets.dart';
 import 'package:barux/pages/home/barber.card.dart';
 import 'package:flutter/material.dart';
 
@@ -12,7 +13,7 @@ class HomeListBarber extends StatelessWidget {
         return BarberCard(
           name: 'name',
           specialization: 'specialization',
-          imageUrl: 'imageUrl',
+          imageUrl: Assets.profile,
           onTap: () {},
         );
       },
