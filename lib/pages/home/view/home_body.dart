@@ -21,8 +21,8 @@ class _HomeBodyState extends State<HomeBody> {
 
   final List<Barber> barbers = [
     Barber(lat: 10.3142, lang: 123.8988, name: "Barber 1"),
-    Barber(lat: 10.3143, lang: 123.8988, name: "Barber 2"),
-    Barber(lat: 10.3143, lang: 123.8988, name: "Barber 3"),
+    Barber(lat: 10.2922, lang: 123.8763, name: "Barber 2"),
+    // Barber(lat: 10.3143, lang: 123.8988, name: "Barber 3"),
   ];
 
   @override
@@ -56,16 +56,16 @@ class _HomeBodyState extends State<HomeBody> {
           _lastTappedLocation = location;
         });
       },
-      markers: {
-        Marker(
-            markerId: MarkerId('tappedLocation'),
-            position: _lastTappedLocation),
-      },
+      // markers: {
+      //   Marker(
+      //       markerId: MarkerId('tappedLocation'),
+      //       position: _lastTappedLocation),
+      // },
       initialCameraPosition: _initialPosition,
       onMapCreated: (GoogleMapController controller) {
         _controller = controller;
       },
-      // markers: _markers,
+      markers: _markers,
       // markers: {
       //   Marker(
       //     markerId: MarkerId('Cebu City'),
