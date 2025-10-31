@@ -18,9 +18,7 @@ class Onboardingscreenpage extends StatelessWidget {
               width: double.infinity,
               decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage(
-                    Assets.barberSpray,
-                  ),
+                  image: AssetImage(Assets.barberSpray),
                   fit: BoxFit.cover,
                 ),
               ),
@@ -56,3 +54,4 @@ class Onboardingscreenpage extends StatelessWidget {
     );
   }
 }
+
