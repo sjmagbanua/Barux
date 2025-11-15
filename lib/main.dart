@@ -1,5 +1,3 @@
-import 'package:barux/pages/map/view/map_page.dart';
-import 'package:barux/pages/onboardingScreen/view/onboardingScreenPage.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -69,7 +67,7 @@ final GoRouter _router = GoRouter(
     GoRoute(
       path: '/',
       builder: (BuildContext context, GoRouterState state) {
-        return const HomePage();
+        return const SigninPage();
       },
       routes: <RouteBase>[
         GoRoute(
