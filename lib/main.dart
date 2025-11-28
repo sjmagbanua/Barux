@@ -1,8 +1,9 @@
-import 'package:barux/pages/onboardingScreen/view/onboardingScreenPage.dart';
-import 'package:barux/pages/signin/view/signin_page.dart';
-import 'package:barux/pages/signup/view/signupPage.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+
+import 'pages/home/view/view.dart';
+import 'pages/signin/view/view.dart';
+import 'pages/signup/view/view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -66,7 +67,7 @@ final GoRouter _router = GoRouter(
     GoRoute(
       path: '/',
       builder: (BuildContext context, GoRouterState state) {
-        return const Onboardingscreenpage();
+        return const SigninPage();
       },
       routes: <RouteBase>[
         GoRoute(
@@ -79,6 +80,12 @@ final GoRouter _router = GoRouter(
           path: SigninPage.route,
           builder: (BuildContext context, GoRouterState state) {
             return const SigninPage();
+          },
+        ),
+        GoRoute(
+          path: HomePage.route,
+          builder: (BuildContext context, GoRouterState state) {
+            return const HomePage();
           },
         ),
       ],
