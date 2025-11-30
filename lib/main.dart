@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
+import 'pages/account/view/view.dart';
 import 'pages/home/view/view.dart';
 import 'pages/signin/view/view.dart';
 import 'pages/signup/view/view.dart';
@@ -56,6 +57,17 @@ class MyApp extends StatelessWidget {
           ),
         ),
         useMaterial3: true,
+        bottomNavigationBarTheme: BottomNavigationBarThemeData(
+          backgroundColor: Colors.blueGrey,
+          elevation: 10,
+          selectedLabelStyle: TextStyle(
+            color: Color(0xFFA67926),
+            fontFamily: 'Montserrat',
+            fontSize: 14.0,
+          ),
+          selectedItemColor: Color(0xFFA67926),
+          showUnselectedLabels: true,
+        ),
       ),
     );
   }
@@ -86,6 +98,12 @@ final GoRouter _router = GoRouter(
           path: HomePage.route,
           builder: (BuildContext context, GoRouterState state) {
             return const HomePage();
+          },
+        ),
+        GoRoute(
+          path: AccountPage.route,
+          builder: (BuildContext context, GoRouterState state) {
+            return const AccountPage();
           },
         ),
       ],
