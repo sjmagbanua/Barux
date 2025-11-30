@@ -6,9 +6,11 @@ class HomeFooter extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BottomNavigationBar(
+      selectedItemColor: Colors.red,
       type: BottomNavigationBarType.fixed,
       items: [
         BottomNavigationBarItem(
+          backgroundColor: Colors.red,
           icon: Icon(
             Icons.home,
             color: Colors.grey,
